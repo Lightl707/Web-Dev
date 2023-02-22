@@ -1,0 +1,42 @@
+<h1>Products</h1>
+
+<div *ngFor="let product of products" class="products">
+  <h3 style="cursor:pointer">
+    <a
+      [title]="product.name + ' - go to store and make a purchase'"
+      [href]="product.link"
+    >
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <div style="display: flex; flex-direction: row;">
+    <img [src]="product.image" alt="product-images" class="product">
+    <p style="color:cadetblue; font-style: oblique;">Rating : {{product.rating}}</p>
+  </div>
+  
+  <div class="show-and-share">
+    <button [routerLink]="['/products', product.id]" id="show-details">Show Details</button>
+    
+    <div style="display: flex; flex-direction: row; margin-bottom: 20px;">
+      
+      <button (click)="shareViaTelegram(product)" class="icon-buttons">
+        <img class="icon" src="https://w7.pngwing.com/pngs/480/819/png-transparent-telegram-icon-telegram-logo-telegram-app-social-icon-messaging-messenger.png">
+      </button>
+
+      <button (click)="shareViaWhatsapp(product)" class="icon-buttons">
+        <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WhatsApp_icon.png/640px-WhatsApp_icon.png">
+      </button>
+    
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
