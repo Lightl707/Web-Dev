@@ -20,11 +20,11 @@ function ticking(tick){
     if(tick.style.color === 'black'){
         tick.style.color = 'white'
         tick.parentNode.querySelector('.text').style.textDecoration = 'none'
-        tick.parentElement.style.background = 'antiquewhite'
+        tick.parentElement.style.background = 'orange'
     }else {
         tick.style.color = 'black'
         tick.parentNode.querySelector('.text').style.textDecoration = 'line-through'
-        tick.parentElement.style.background = 'aquamarine'
+        tick.parentElement.style.background = 'red'
     }
 }
 
