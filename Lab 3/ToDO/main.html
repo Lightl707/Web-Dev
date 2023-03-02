@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .top{
+            background-color: rgb(0, 0, 0);
+            color:gray;
+            margin-top: 20px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        .top h2{
+            margin-left: 50px;
+        }
+        h1{
+            margin: 50px 400px 0;
+            font-size: 40px;
+        }
+        .task{
+            margin:20px 0;
+        }
+        .task input{
+            width: 550px;
+            height: 30px;
+            margin-left: 450px;
+            bottom: 50px;
+            border-radius: 8px;
+            padding-left: 15px;
+        }
+        .task input:focus{
+            outline: none;
+            border-color: #0d75ec;
+        }
+        .task button{
+            font-size: 20px;
+            background-color: #0d75ec;
+            border: #0d75ec;
+            color: white;
+            border-radius: 8px;
+            height: 30px;
+            margin-left: 15px;
+            padding-top: -10px;
+            padding-bottom: 10px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .task button:hover{
+            background-color:#0067b8;
+        }
+        .do-tasks{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .card{
+            margin: auto;
+            width: 80%;
+            padding: 20px 30px;
+            background-color: antiquewhite;
+            display: flex;
+            margin-bottom: 22px;
+        }
+        .text{
+            width: 95%;
+        }
+        .done{
+            margin-right: 20px;
+            background-color: white;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="top">
+    <h2>ToDo List</h2>
+</div>
+<h1>ToDo List</h1>
+<div class="task">
+    <input type="text" placeholder="New Task" id="input">
+    <button id="push">Add</button>
+</div>
+<div class="do-tasks">
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
